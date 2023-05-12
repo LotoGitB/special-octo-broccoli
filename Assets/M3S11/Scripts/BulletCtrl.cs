@@ -25,5 +25,10 @@ public class BulletCtrl : MonoBehaviour
   {
     Debug.Log("touch");
     gameObject.SetActive(false);
+    if (other.gameObject.tag == "Enemy")
+    {
+      Destroy(other.gameObject);
+      // other.gameObject.SetActive(false);
+    }
   }
 }
